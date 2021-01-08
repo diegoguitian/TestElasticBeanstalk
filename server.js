@@ -1,5 +1,8 @@
-const http = require('http');
-http.createServer(function(req, res) {
-    res.write('<h1>Test Elastic Beanstalk</h1>');
-    res.end();
-}).listen(443);
+const express = require('express');
+const app = express();
+
+app.get('/', function(req, res) {
+    res.send('<h1>TestElasticBeanstal</h1>')
+});
+
+app.listen(443);
